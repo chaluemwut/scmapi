@@ -10,6 +10,8 @@
 		037B69821B92185F0006D47A /* scmswift.h in Headers */ = {isa = PBXBuildFile; fileRef = 037B69811B92185F0006D47A /* scmswift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		037B69881B92185F0006D47A /* scmswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 037B697C1B92185F0006D47A /* scmswift.framework */; };
 		037B698F1B92185F0006D47A /* scmswiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037B698E1B92185F0006D47A /* scmswiftTests.swift */; };
+		037B69991B921B2C0006D47A /* SCMAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037B69981B921B2C0006D47A /* SCMAPI.swift */; };
+		037B699B1B921C4B0006D47A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037B699A1B921C4B0006D47A /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		037B69871B92185F0006D47A /* scmswiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = scmswiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		037B698D1B92185F0006D47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		037B698E1B92185F0006D47A /* scmswiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scmswiftTests.swift; sourceTree = "<group>"; };
+		037B69981B921B2C0006D47A /* SCMAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMAPI.swift; sourceTree = "<group>"; };
+		037B699A1B921C4B0006D47A /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				037B69811B92185F0006D47A /* scmswift.h */,
 				037B697F1B92185F0006D47A /* Supporting Files */,
+				037B69981B921B2C0006D47A /* SCMAPI.swift */,
+				037B699A1B921C4B0006D47A /* Config.swift */,
 			);
 			path = scmswift;
 			sourceTree = "<group>";
@@ -209,6 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				037B69991B921B2C0006D47A /* SCMAPI.swift in Sources */,
+				037B699B1B921C4B0006D47A /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +331,7 @@
 		037B69931B92185F0006D47A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -332,12 +341,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		037B69941B92185F0006D47A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -399,6 +410,7 @@
 				037B69941B92185F0006D47A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		037B69951B92185F0006D47A /* Build configuration list for PBXNativeTarget "scmswiftTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +419,7 @@
 				037B69971B92185F0006D47A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
